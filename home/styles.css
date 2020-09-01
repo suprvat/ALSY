@@ -1,0 +1,76 @@
+ body{
+   
+    margin: 0px;
+   text-align: center;
+
+} 
+
+
+
+/* category icon css */
+
+#category{
+    padding: 5% 0 5%;
+}
+
+.i-category{
+    height: 150px;
+    width: 100px;
+    text-align: center;
+    /* background-image: url("images/category-b-img/book-with-green-board-background_1150-3837.jpg");  */
+    
+
+}
+.i-category h6{
+    padding-top: 10px;
+    color: teal;
+}
+
+.i-category:hover ,.i-category h6:hover{
+    background-color :rgb(246, 146, 162) ;
+    color: white;
+}
+.icon{
+    padding-top: 2rem;
+}
+
+
+
+
+/* latest-products */
+
+#latest-products{
+    text-align: center;
+}
+.latest-product-container{
+    /* background-color: aquamarine; */
+    background-image: url("images/background-images/bg-intro.png");
+    padding: 10% 2% 5%;
+   
+
+
+}
+
+.latest-products-image{
+    width: 400px;
+}
+
+
+
+/* procedure */
+#procedure{
+    text-align: center;
+    
+}
+
+.procedure-container{
+    padding: 5% 0 5%;
+    background-color: rgb(241, 231, 233);
+}
+
+.procedure-heading{
+    padding-bottom: 3rem ;
+}
+.icon-box{
+    padding-bottom: 1rem;
+}

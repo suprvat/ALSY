@@ -26,7 +26,7 @@
         <?php } else { ?>
                 <p>DO YOU WANT TO ADD A PRODUCT</p>
                 <p>Please <a href="add_new_product.php">Add Product</a> to sell</p>
-                <p>Please <a href="change.php">EDIT</a> if you to change something</p>
+                //<p>Please <a href="change.php">EDIT</a> if you to change something</p>
                 <p>Please <a href="logout.php">Log Out</a> when you are done.</p>
         <?php } ?>
     <?php } ?>

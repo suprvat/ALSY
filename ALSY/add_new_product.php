@@ -14,7 +14,7 @@ if( isset($_POST["submit1"])){
     $fnm1=basename($_FILES['image1']['name']);
     $destination1="imgs/".$v13.$fnm;
     $temp1="imgs/".$v13.$fnm;
-    move_uploaded_file($_FILES['image1']['tmp_name'],$destination);
+    move_uploaded_file($_FILES['image1']['tmp_name'],$destination1);
 
     $v21=rand(1111,9999);
     $v22=rand(1111,9999);
@@ -24,7 +24,7 @@ if( isset($_POST["submit1"])){
     $fnm2=basename($_FILES['image2']['name']);
     $destination2="imgs/".$v23.$fnm;
     $temp2="imgs/".$v23.$fnm;
-    move_uploaded_file($_FILES['image2']['tmp_name'],$destination);
+    move_uploaded_file($_FILES['image2']['tmp_name'],$destination2);
 
     $v31=rand(1111,9999);
     $v32=rand(1111,9999);
@@ -34,7 +34,7 @@ if( isset($_POST["submit1"])){
     $fnm3=basename($_FILES['image3']['name']);
     $destination3="imgs/".$v33.$fnm;
     $temp3="imgs/".$v33.$fnm;
-    move_uploaded_file($_FILES['image3']['tmp_name'],$destination);
+    move_uploaded_file($_FILES['image3']['tmp_name'],$destination3);
 
 
     // Data validation

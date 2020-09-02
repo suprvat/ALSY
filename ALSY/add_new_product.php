@@ -3,8 +3,6 @@ require_once "pdo.php";
 session_start();
 
 if( isset($_POST["submit1"])){
-//if ( isset($_POST['category']) && isset($_POST['pname']) && isset($_POST['price']) && isset($_POST['purchase']) 
-  //  && isset($_POST['brand']) && isset($_POST['description']) && isset($_FILES['image'])){
 
     $v11=rand(1111,9999);
     $v12=rand(1111,9999);
@@ -12,30 +10,128 @@ if( isset($_POST["submit1"])){
     $v13=md5($v13);
     
     $fnm1=basename($_FILES['image1']['name']);
-    $destination1="imgs/".$v13.$fnm;
-    $temp1="imgs/".$v13.$fnm;
-    move_uploaded_file($_FILES['image1']['tmp_name'],$destination1);
+    $destination1="imgs/".$v13.$fnm1;
+    $temp1="imgs/".$v13.$fnm1;
+    $img1_type = strtolower(pathinfo($destination1,PATHINFO_EXTENSION));
+    $img1_size = getimagesize($_FILES["image1"]["tmp_name"]);
+  
+    //image 1 validation
+    if($img1_size === false) {
+      $_SESSION['error'] = 'File is not an image';
+      header("Location: add_new_product.php");
+      return;
+    }
 
+    if (file_exists($destination1)) {
+      $_SESSION['error'] = 'Sorry! File already exist';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    if ($_FILES["image1"]["size"] > 500000) {
+      $_SESSION['error'] = 'Sorry, your file is too lagre';
+      header("Location: add_new_product.php");
+      return;
+    }
+    
+    if($img1_type != "jpg" && $img1_type != "png" && $img1_type != "jpeg"
+    && $img1_type != "gif" ) {
+      $_SESSION['error'] = 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.';
+      header("Location: add_new_product.php");
+      return;
+    }
+    if( ! (move_uploaded_file($_FILES['image1']['tmp_name'],$destination1)) ){
+      $_SESSION['error'] = 'Sorry, there was a problem uploading your file.';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    //image 2
+    $target = $target . $final_name;
     $v21=rand(1111,9999);
     $v22=rand(1111,9999);
     $v23=$v21.$v22;
     $v23=md5($v23);
 
     $fnm2=basename($_FILES['image2']['name']);
-    $destination2="imgs/".$v23.$fnm;
-    $temp2="imgs/".$v23.$fnm;
-    move_uploaded_file($_FILES['image2']['tmp_name'],$destination2);
+    $destination2="imgs/".$v23.$fnm2;
+    $temp2="imgs/".$v23.$fnm2;
+    $img2_type = strtolower(pathinfo($destination2,PATHINFO_EXTENSION));
+    $img2_size = getimagesize($_FILES["image2"]["tmp_name"]);
 
+    //image 2 validation
+    if($img2_size === false) {
+      $_SESSION['error'] = 'File is not an image';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    if (file_exists($destination2)) {
+      $_SESSION['error'] = 'Sorry! File already exist';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    if ($_FILES["image2"]["size"] > 500000) {
+      $_SESSION['error'] = 'Sorry, your file is too lagre';
+      header("Location: add_new_product.php");
+      return;
+    }
+    
+    if($img2_type != "jpg" && $img2_type != "png" && $img2_type != "jpeg"
+    && $img2_type != "gif" ) {
+      $_SESSION['error'] = 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.';
+      header("Location: add_new_product.php");
+      return;
+    }
+    if( ! (move_uploaded_file($_FILES['image2']['tmp_name'],$destination2)) ){
+      $_SESSION['error'] = 'Sorry, there was a problem uploading your file.';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    //image 3
     $v31=rand(1111,9999);
     $v32=rand(1111,9999);
     $v33=$v31.$v32;
     $v33=md5($v33);
 
     $fnm3=basename($_FILES['image3']['name']);
-    $destination3="imgs/".$v33.$fnm;
-    $temp3="imgs/".$v33.$fnm;
-    move_uploaded_file($_FILES['image3']['tmp_name'],$destination3);
+    $destination3="imgs/".$v33.$fnm3;
+    $temp3="imgs/".$v33.$fnm3;
+    $img3_type = strtolower(pathinfo($destination3,PATHINFO_EXTENSION));
+    $img3_size = getimagesize($_FILES["image3"]["tmp_name"]);
+  
+    //image 3 validation
+    if($img3_size === false) {
+      $_SESSION['error'] = 'File is not an image';
+      header("Location: add_new_product.php");
+      return;
+    }
 
+    if (file_exists($destination3)) {
+      $_SESSION['error'] = 'Sorry! File already exist';
+      header("Location: add_new_product.php");
+      return;
+    }
+
+    if ($_FILES["image3"]["size"] > 500000) {
+      $_SESSION['error'] = 'Sorry, your file is too lagre';
+      header("Location: add_new_product.php");
+      return;
+    }
+    
+    if($img3_type != "jpg" && $img3_type != "png" && $img3_type != "jpeg"
+    && $img3_type != "gif" ) {
+      $_SESSION['error'] = 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.';
+      header("Location: add_new_product.php");
+      return;
+    }
+    if( ! (move_uploaded_file($_FILES['image3']['tmp_name'],$destination3)) ){
+      $_SESSION['error'] = 'Sorry, there was a problem uploading your file.';
+      header("Location: add_new_product.php");
+      return;
+    }
 
     // Data validation
     if ( strlen($_POST['pname']) < 1 ){

@@ -1,0 +1,60 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/templates/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.wide-img {
+  /* width: auto; */
+  /* height: 400px; */
+  max-width: 100%;
+  max-height: 100%;
+  padding-left: 200px;
+}
+.card-img-top {
+  width: 250px;
+}
+
+/* container */
+
+
+.top-carouse{
+  margin-left: 200px;
+}
+
+.container {
+  /* margin-right: 0; */
+  text-align: center;
+}
+.content-page {
+  text-align: center;
+}
+
+/* DEMO DEMO DEMO */
+
+#product-list-page {
+  margin-left: 100px;
+}
+
+.mysidenav {
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.589);
+  position: fixed;
+}
+
+.mysidenav img {
+  width: 100%;
+}
+
+.product-img {
+  max-width: 100%;
+}
+
+.product-description {
+  padding: 15px 10px 20px;
+}

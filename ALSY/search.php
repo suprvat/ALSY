@@ -8,13 +8,13 @@ if(isset($_GET['search']))
 	if (strlen($_GET['$a']) < 1)
 	{
         $_SESSION['error'] = 'Missing data';
-        header("Location: ln.php");
+        header("Location: search.php");
         return;
     }
     $a = trim(stripslashes(htmlspecialchars($_GET['$a'])));
     if (!preg_match("/^[a-zA-Z-' ]*$/",$a))
     {
-        header("Location: ln.php");
+        header("Location: search.php");
         return;
     }
 	$sql = "SELECT * FROM product WHERE product_name like '%$a%"';

@@ -1,0 +1,39 @@
+.content_bold{
+    font-weight: 500;
+}
+
+
+.navbar{
+    background-color: rgb(72, 30, 73);
+    padding: 6px;
+}
+.hc{
+    font-size: 20px !important;
+}
+.navbar a {
+    float: left;
+    padding: 9px;
+    color: #efeff7;
+    font-size: 20px;
+}
+.login{
+    font-size: 13px;
+}
+.navbar a:hover {
+    color: #5ff0f0;
+}
+
+.postadd a:hover {
+    color: #ffffff;
+}
+.fixed-bottom{
+    float: right;
+    
+}
+  
+.add{
+    background-color: rgb(146, 5, 28);
+    position: relative;
+    line-height: 45px;
+    
+}

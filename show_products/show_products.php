@@ -14,7 +14,7 @@
 
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container" style="margin: 20px 10px 60px !important ;>
 
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

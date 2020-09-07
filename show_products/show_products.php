@@ -18,7 +18,7 @@
 
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="max-width:500px; max-height:300px !important;margin-left:300px;">
         <div class="carousel-item active">
           <img class="d-block w-100" src="images/img5.jpg" alt="First slide">
         </div>
